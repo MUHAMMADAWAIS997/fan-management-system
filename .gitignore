@@ -1,7 +1,7 @@
-# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
-
-# dependencies
-/node_modules
+# ==========================================
+# Dependencies
+# ==========================================
+node_modules/
 /.pnp
 .pnp.*
 .yarn/*
@@ -10,32 +10,87 @@
 !.yarn/releases
 !.yarn/versions
 
-# testing
-/coverage
-
-# next.js
-/.next/
+# ==========================================
+# Build & Output Folders
+# ==========================================
+/dist/
+/build/
 /out/
+/.next/
+/release/
+/bin/
 
-# production
-/build
+# TypeScript / Next.js generated files
+*.tsbuildinfo
+next-env.d.ts
 
-# misc
-.DS_Store
-*.pem
+# Installer & packaged output files
+*.exe
+*.msi
+*.dmg
+*.AppImage
+*.deb
+*.rpm
+*.zip
+*.tar.gz
+*.blockmap
 
-# debug
+# ==========================================
+# Environment & Secret Files
+# ==========================================
+.env
+.env.*
+!.env.example
+
+# ==========================================
+# Databases & Local Storage
+# ==========================================
+*.sqlite
+*.sqlite-*
+*.db
+*.db-journal
+*.db-shm
+*.db-wal
+*.recovery
+
+# ==========================================
+# Logs & Debug Info
+# ==========================================
+*.log
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 .pnpm-debug.log*
+logs/
 
-# env files (can opt-in for committing if needed)
-.env*
+# ==========================================
+# Testing & Coverage
+# ==========================================
+/coverage/
+.nyc_output/
 
-# vercel
+# ==========================================
+# Platform Caches
+# ==========================================
 .vercel
+.turbo/
+.cache/
 
-# typescript
-*.tsbuildinfo
-next-env.d.ts
+# ==========================================
+# OS & Editor Files
+# ==========================================
+.DS_Store
+Thumbs.db
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+.idea/
+*.swp
+*.swo
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+

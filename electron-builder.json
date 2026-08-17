@@ -1,0 +1,43 @@
+{
+  "appId": "com.fims.fanmanagement",
+  "productName": "FIMS",
+  "copyright": "© 2026 Fans Inventory Management System",
+  "directories": {
+    "output": "dist",
+    "buildResources": "build"
+  },
+  "files": [
+    "electron/**/*",
+    "package.json"
+  ],
+  "afterPack": "scripts/after-pack.js",
+  "extraResources": [],
+  "win": {
+    "icon": "public/icon.ico",
+    "target": [
+      {
+        "target": "nsis",
+        "arch": [
+          "x64"
+        ]
+      }
+    ]
+  },
+  "nsis": {
+    "oneClick": false,
+    "allowToChangeInstallationDirectory": true,
+    "shortcutName": "FIMS",
+    "createDesktopShortcut": "always",
+    "createStartMenuShortcut": true,
+    "installerIcon": "public/icon.ico",
+    "uninstallerIcon": "public/icon.ico",
+    "installerHeaderIcon": "public/icon.ico",
+    "uninstallDisplayName": "Uninstall FIMS",
+    "displayLanguageSelector": false
+  },
+  "asar": true,
+  "asarUnpack": [
+    "**/node_modules/better-sqlite3/**",
+    "**/node_modules/bcryptjs/**"
+  ]
+}
